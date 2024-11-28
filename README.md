@@ -1,21 +1,29 @@
 # graspnetAPI
-[![PyPI version](https://badge.fury.io/py/graspnetAPI.svg)](https://badge.fury.io/py/graspnetAPI)
-
-## Dataset
-
-Visit the [GraspNet Website](http://graspnet.net) to get the dataset.
+Forked from [original repo](https://github.com/graspnet/graspnetAPI) on `28/11/2024`.
 
 ## Install
-You can install using pip.
+1. Download repo.
 ```bash
-pip install graspnetAPI
+git clone https://github.com/alk15/graspnetAPI.git
+cd graspnetAPI
 ```
 
-You can also install from source.
+2. The repo has been tested with python3.8.
+```bash
+sudo add-apt-repository ppa:deadsnakes/ppa
+sudo apt update
+sudo apt install python3.8
+```
+
+3. Create an environment.
+```bash
+virtualenv -p python3.8 ./venv
+source venv/bin/activate
+```
+
+4. Install from source.
 
 ```bash
-git clone https://github.com/graspnet/graspnetAPI.git
-cd graspnetAPI
 pip install .
 ```
 
@@ -23,21 +31,6 @@ pip install .
 
 Refer to [online document](https://graspnetapi.readthedocs.io/en/latest/index.html) for more details.  
 [PDF Document](https://graspnetapi.readthedocs.io/_/downloads/en/latest/pdf/) is available, too. 
-
-You can also build the doc manually.
-```bash
-cd docs
-pip install -r requirements.txt
-bash build_doc.sh
-```
-
-LaTeX is required to build the pdf, but html can be built anyway.
-
-## Grasp Definition
-The frame of our gripper is defined as 
-<div align="center">
-    <img src="grasp_definition.png", width="400">
-</div>
 
 
 ## Examples
@@ -79,17 +72,3 @@ Please cite these papers in your publications if it helps your research:
   year={2020}
 }
 ```
-
-## Change Log
-
-#### 1.2.6
-
-- Add transformation for Grasp and GraspGroup.
-
-#### 1.2.7
-
-- Add inpainting for depth image.
-
-#### 1.2.8
-
-- Minor fix bug on loadScenePointCloud.
