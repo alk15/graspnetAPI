@@ -1,6 +1,7 @@
 __author__ = 'mhgou'
 __version__ = '1.0'
 
+import os
 from graspnetAPI import GraspNet
 import open3d as o3d
 import cv2
@@ -9,7 +10,7 @@ import cv2
 # change the graspnet_root path
 
 ####################################################################
-graspnet_root = '/home/gmh/graspnet' # ROOT PATH FOR GRASPNET
+graspnet_root = os.environ['GRASPNET_HOME']
 ####################################################################
 
 sceneId = 1

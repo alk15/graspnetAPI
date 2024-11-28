@@ -2,13 +2,12 @@ __author__ = 'mhgou'
 __version__ = '1.0'
 
 # GraspNetAPI example for visualization.
-# change the graspnet_root path
-
-####################################################################
-graspnet_root = '/home/gmh/graspnet' # ROOT PATH FOR GRASPNET
-####################################################################
-
+import os
 from graspnetAPI import GraspNet
+
+####################################################################
+graspnet_root = os.environ['GRASPNET_HOME']
+####################################################################
 
 # initialize a GraspNet instance  
 g = GraspNet(graspnet_root, camera='kinect', split='train')

@@ -27,6 +27,11 @@ source venv/bin/activate
 pip install .
 ```
 
+5. Point to GraspNet dataset.
+```bash
+export GRASPNET_HOME='/path/to/graspnet'
+```
+
 ## Document
 
 Refer to [online document](https://graspnetapi.readthedocs.io/en/latest/index.html) for more details.  

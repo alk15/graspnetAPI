@@ -2,12 +2,13 @@ __author__ = 'mhgou'
 __version__ = '1.0'
 
 # GraspNetAPI example for evaluate grasps for a scene.
-# change the graspnet_root path
+
+import os
 import numpy as np
 from graspnetAPI import GraspNetEval
 
 ####################################################################
-graspnet_root = '/home/gmh/graspnet' # ROOT PATH FOR GRASPNET
+graspnet_root = os.environ['GRASPNET_HOME']
 dump_folder = '/home/gmh/git/rgbd_graspnet/dump_affordance_iounan/' # ROOT PATH FOR DUMP
 ####################################################################
 

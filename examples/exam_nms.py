@@ -2,18 +2,18 @@ __author__ = 'mhgou'
 __version__ = '1.0'
 
 # GraspNetAPI example for grasp nms.
-# change the graspnet_root path
+
+import os
+from graspnetAPI import GraspNet
+import open3d as o3d
+import cv2
 
 ####################################################################
-graspnet_root = '/home/gmh/graspnet' # ROOT PATH FOR GRASPNET
+graspnet_root = os.environ['GRASPNET_HOME']
 ####################################################################
 
 sceneId = 1
 annId = 3
-
-from graspnetAPI import GraspNet
-import open3d as o3d
-import cv2
 
 # initialize a GraspNet instance  
 g = GraspNet(graspnet_root, camera='kinect', split='train')

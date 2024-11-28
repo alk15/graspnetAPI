@@ -2,8 +2,8 @@ __author__ = 'mhgou'
 __version__ = '1.0'
 
 # GraspNetAPI example for generating rectangle grasp from 6d grasp.
-# change the graspnet_root path and NUM_PROCESS
 
+import os
 from graspnetAPI import GraspNet
 from graspnetAPI.graspnet import TOTAL_SCENE_NUM
 import os
@@ -32,7 +32,7 @@ def generate_scene_rectangle_grasp(sceneId, dump_folder, camera):
 
 if __name__ == '__main__':
     ####################################################################
-    graspnet_root = '/home/minghao/graspnet' # ROOT PATH FOR GRASPNET ##
+    graspnet_root = os.environ['GRASPNET_HOME']
     ####################################################################
 
     dump_folder = 'rect_labels'

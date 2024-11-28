@@ -1,6 +1,7 @@
 __author__ = 'mhgou'
 __version__ = '1.0'
 
+import os
 from graspnetAPI import GraspNet
 
 # GraspNetAPI example for checking the data completeness.
@@ -9,7 +10,7 @@ from graspnetAPI import GraspNet
 if __name__ == '__main__':
 
     ####################################################################
-    graspnet_root = '/home/gmh/graspnet'  ### ROOT PATH FOR GRASPNET ###
+    graspnet_root = os.environ['GRASPNET_HOME']
     ####################################################################
 
     g = GraspNet(graspnet_root, 'kinect', 'all')

@@ -1,16 +1,16 @@
 __author__ = 'mhgou'
 __version__ = '1.0'
 
+import os
 from graspnetAPI import GraspNet, Grasp, GraspGroup
 import open3d as o3d
 import cv2
 import numpy as np
 
 # GraspNetAPI example for loading grasp for a scene.
-# change the graspnet_root path
 
 ####################################################################
-graspnet_root = '/disk1/graspnet' # ROOT PATH FOR GRASPNET
+graspnet_root = os.environ['GRASPNET_HOME']
 ####################################################################
 
 sceneId = 1

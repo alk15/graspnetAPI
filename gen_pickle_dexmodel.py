@@ -1,12 +1,13 @@
 __author__ = 'mhgou'
 
+import os
 from graspnetAPI.utils.eval_utils import load_dexnet_model
 from tqdm import tqdm
 import pickle
-import os
 
-##### Change the root to your path #####
-graspnet_root = '/home/gmh/graspnet'
+####################################################################
+graspnet_root = os.environ['GRASPNET_HOME']
+####################################################################
 
 ##### Do NOT change this folder name #####
 dex_folder = 'dex_models'

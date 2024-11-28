@@ -1,6 +1,7 @@
 __author__ = 'mhgou'
 __version__ = '1.0'
 
+import os
 from graspnetAPI import GraspNet
 import cv2
 import open3d as o3d
@@ -13,7 +14,7 @@ sceneId = 5
 annId = 3
 
 ####################################################################
-graspnet_root = '/home/gmh/graspnet' # ROOT PATH FOR GRASPNET
+graspnet_root = os.environ['GRASPNET_HOME']
 ####################################################################
 
 g = GraspNet(graspnet_root, camera = camera, split = 'all')
