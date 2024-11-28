@@ -33,9 +33,9 @@ def generate_scene_rectangle_grasp(sceneId, dump_folder, camera):
 if __name__ == '__main__':
     ####################################################################
     graspnet_root = os.environ['GRASPNET_HOME']
+    dump_folder = os.path.join(graspnet_root, 'rect_labels')
     ####################################################################
-
-    dump_folder = 'rect_labels'
+    
     if not os.path.exists(dump_folder):
         os.mkdir(dump_folder)
 
@@ -43,7 +43,7 @@ if __name__ == '__main__':
         from multiprocessing import Pool
         pool = Pool(24)
         for camera in ['realsense', 'kinect']:
-            for sceneId in range(120):
+            for sceneId in range(190):
                 pool.apply_async(func = generate_scene_rectangle_grasp, args = (sceneId, dump_folder, camera))
         pool.close()
         pool.join()
